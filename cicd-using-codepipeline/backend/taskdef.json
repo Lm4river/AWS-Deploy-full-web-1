@@ -1,0 +1,25 @@
+
+{
+    "executionRoleArn": "arn:aws:iam::430950558682:role/final-assignment-task-execution-role",
+    "containerDefinitions": [
+        {
+            "name": "nodejs-container",
+            "image": "<IMAGE_NAME>",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "containerPort": 3000
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "512",
+    "memory": "1024",
+    "family": "backend-task-definition"
+}
