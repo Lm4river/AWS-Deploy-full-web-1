@@ -1,5 +1,5 @@
-## Đây là một hệ thống gồm 3 thành phần: Frontend, Backend & Database dùng để các bạn luyện tập việc triển khai hệ thống lên AWS .
-## run bởi docker-compose:
+## Đây là một hệ thống gồm 3 thành phần: Frontend, Backend & Database.
+## Run bởi docker-compose:
 - `docker-compose -f docker-compose.yaml up -d`
 - Sau đó truy cập vào `localhost:3000` để xem website. Thử add một vài user, view list users.
 
