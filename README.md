@@ -118,7 +118,7 @@ Nhập password, Enter
 #### 6. Test kết nối tới Frontend Web & truy cập ứng dụng, thử add/delete user
 - URL sample: ```https://xxxx.cloudfront.net```
 
-#### Sơ đồ thiết kế 
+#### 7. Sơ đồ thiết kế 
 ### Networking
 ![alt text](image.png)
 ### Security
