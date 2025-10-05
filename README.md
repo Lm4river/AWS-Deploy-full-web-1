@@ -71,8 +71,8 @@
 
 #### 7. Sơ đồ thiết kế theo phương án 1
 ### Networking
-![alt text](image.png)
+![alt text](img-design-system/image.png)
 ### Security
-![alt text](image-1.png)
+![alt text](img-design-system/image-1.png)
 ### Resources
-![alt text](image-2.png)
+![alt text](img-design-system/image-2.png)
