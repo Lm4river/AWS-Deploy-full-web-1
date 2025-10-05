@@ -1,5 +1,5 @@
-## Đây là một hệ thống gồm 3 thành phần: Frontend, Backend & Database dùng để các bạn luyện tập việc triển khai hệ thống lên AWS sử dụng các công nghệ & kiến thức đã học.
-## Trước khi các bạn bắt đầu, đảm bảo project có thể run bởi docker-compose:
+## Đây là một hệ thống gồm 3 thành phần: Frontend, Backend & Database dùng để các bạn luyện tập việc triển khai hệ thống lên AWS .
+## run bởi docker-compose:
 - `docker-compose -f docker-compose.yaml up -d`
 - Sau đó truy cập vào `localhost:3000` để xem website. Thử add một vài user, view list users.
 
@@ -15,8 +15,6 @@
 ### Database
 - Sử dụng image Mongo:5.0, port 27017.
 
-### Yêu cầu của assignment: Triển khai lên AWS & cấu hình CICD theo 1 trong 2 phương án sau:
-### Lưu ý: riêng phần CICD, có thể triển khai mono repo hoặc tách frontend, backend thành 2 repo.
 
 ### Phương án 1:
 - Frontend: Serverside Rendering trên ECS, ECR.
@@ -77,12 +75,6 @@ Nhập password, Enter
 
 #### 6. Test kết nối tới ALB & truy cập ứng dụng, thử add/delete user
 - URL sample: ```http://linh-test-alb-581342174.ap-southeast-1.elb.amazonaws.com:80```
-#### 7. Optional: Cấu hình CICD cho repo (monorepo hoặc tách thành 2 repo FE, BE) sử dụng kiến thức đã học.
-- Các bạn có thể sử dụng Jenkins hoặc CodePipeline để cấu hình CICD cho frontend & backend repository.
-- Với mỗi repository, cấu hình 2 pipeline sau:
-  + Pipeline 1: Tự động build & deploy mỗi khi code được merge/push lên nhánh develop.
-  + Pipeline 2: Manual build & deploy với branch/tag được chỉ định.
-- Do hạn chế về số lượng resource, cả 2 pipeline sẽ cùng deploy lên một target environment. Trong thực tế dự án, 2 pipeline sẽ deploy lên 2 target environment khác nhau.
 
 ### Phương án gợi ý cho kiến trúc 2: Frontend: S3 + CloudFront, Backend: ECS, DB: Document DB chạy Mongo, kết hợp ALB.
 #### 1. Tạo network (VPC, Subnet), Security Group & ECS Cluster, ECR repository cho BE.
@@ -126,13 +118,10 @@ Nhập password, Enter
 #### 6. Test kết nối tới Frontend Web & truy cập ứng dụng, thử add/delete user
 - URL sample: ```https://xxxx.cloudfront.net```
 
-#### 7. Optional: Cấu hình CICD cho repo (monorepo hoặc tách thành 2 repo FE, BE) sử dụng kiến thức đã học.
-- Các bạn có thể sử dụng Jenkins hoặc CodePipeline để cấu hình CICD cho frontend & backend repository.
-- Với mỗi repository, cấu hình 2 pipeline sau:
-  + Pipeline 1: Tự động build & deploy mỗi khi code được merge/push lên nhánh develop.
-  + Pipeline 2: Manual build & deploy với branch/tag được chỉ định.
-- Do hạn chế về số lượng resource, cả 2 pipeline sẽ cùng deploy lên một target environment. Trong thực tế dự án, 2 pipeline sẽ deploy lên 2 target environment khác nhau.
-
-
-## Chúc các bạn deploy thành công!
-
+#### Sơ đồ thiết kế 
+### Networking
+![alt text](image.png)
+### Security
+![alt text](image-1.png)
+### Resources
+![alt text](image-2.png)
